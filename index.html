@@ -97,6 +97,7 @@
             padding: 20px;
             border-radius: 8px;
             margin-top: 20px;
+            margin-bottom: 40px;
         }
 
         .exercise-title {
@@ -113,6 +114,23 @@
 
         .emoji {
             font-size: 1.2em;
+        }
+
+        .attribution {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .attribution a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+
+        .attribution a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
@@ -155,7 +173,7 @@
             <h2>Let's Get Ready! 🏔️</h2>
             <p>Hey everyone! The ski trip is just around the corner, and we're all buzzing with excitement. To make sure
                 we're in top form to hit the slopes, we've put together a fun, optional <strong>Leg Blaster Training
-                    Plan</strong> to get those legs ski-season ready.</p>
+                    Plan</strong> to get those legs ski-season ready.  It's based on this great <a href="https://sawback.com/blog/leg-blasters/" target="_blank">article</a></p>
             <p>This is totally optional, but a few of us are going for it, and it'd be awesome if more of you joined in.
                 We could even turn this into mini meet-ups for some runs or group workouts! Let's make this not just a
                 ski trip but a journey to peak fitness together! 💪</p>
@@ -181,11 +199,15 @@
             </div>
 
             <div id="training-schedule"></div>
+
+            <div class="attribution">
+                Workout inspired by <a href="https://sawback.com/blog/leg-blasters/" target="_blank">Sawback's Leg
+                    Blasters Guide</a>
+            </div>
         </div>
     </div>
 
     <script>
-        // Countdown Timer
         function updateCountdown() {
             const tripDate = new Date('March 15, 2025 00:00:00').getTime();
             const now = new Date().getTime();
@@ -205,7 +227,6 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Training Schedule Generation
         const schedule = [
             {
                 week: 1,
